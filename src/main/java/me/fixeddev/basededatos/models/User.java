@@ -12,10 +12,10 @@ public class User {
     @Column(name = "usersId")
     private Long usersId;
 
-    @Column(nullable = false,name = "firstName")
+    @Column(nullable = false, name = "firstName")
     private String firstName;
 
-    @Column(nullable = false,name = "lastNamePaternal")
+    @Column(nullable = false, name = "lastNamePaternal")
     private String lastNamePaternal;
 
     @Column(nullable = false)
@@ -27,7 +27,7 @@ public class User {
     @Column
     private String password;
 
-      @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "roleId", nullable = false)
     private Role role;
 

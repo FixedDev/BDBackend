@@ -12,11 +12,11 @@ public class Ticket {
     @Column(name = "ticketsId")
     private Long ticketsId;
 
-      @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "eventId", nullable = false)
     private Event event;
 
-      @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     @JoinColumn(name = "userId")
     private User user;
 
